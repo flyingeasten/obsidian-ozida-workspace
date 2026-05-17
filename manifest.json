@@ -1,0 +1,10 @@
+{
+  "id": "ozida-workspace",
+  "name": "Ozida Workspace",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "A personal AI workspace and dashboard for Obsidian.",
+  "author": "Easten",
+  "authorUrl": "https://github.com/flyingeasten",
+  "isDesktopOnly": false
+}

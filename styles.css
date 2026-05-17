@@ -1,0 +1,233 @@
+.ozida-workspace-view {
+  --ozida-gap: 16px;
+  --ozida-radius: 8px;
+  --ozida-card-bg: var(--background-secondary);
+  --ozida-card-border: var(--background-modifier-border);
+  --ozida-muted: var(--text-muted);
+  --ozida-accent: var(--interactive-accent);
+  height: 100%;
+  padding: 0;
+  color: var(--text-normal);
+  background: var(--background-primary);
+}
+
+.ozida-shell {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) minmax(320px, 1fr) minmax(240px, 300px);
+  gap: var(--ozida-gap);
+  height: 100%;
+  min-height: 0;
+  padding: var(--ozida-gap);
+  overflow: hidden;
+}
+
+.ozida-left-sidebar,
+.ozida-center-panel,
+.ozida-right-panel {
+  min-height: 0;
+  overflow: auto;
+}
+
+.ozida-left-sidebar,
+.ozida-right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ozida-brand {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--ozida-card-border);
+  border-radius: var(--ozida-radius);
+  background: var(--ozida-card-bg);
+}
+
+.ozida-brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: var(--text-on-accent);
+  background: var(--ozida-accent);
+  font-weight: 700;
+}
+
+.ozida-brand-text h2,
+.ozida-brand-text p,
+.ozida-center-header h1,
+.ozida-center-header p,
+.ozida-card h3,
+.ozida-card p {
+  margin: 0;
+}
+
+.ozida-brand-text h2 {
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.ozida-brand-text p {
+  color: var(--ozida-muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.ozida-nav {
+  display: grid;
+  gap: 6px;
+}
+
+.ozida-nav-item,
+.ozida-button {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  cursor: pointer;
+  font: inherit;
+}
+
+.ozida-nav-item {
+  width: 100%;
+  padding: 9px 10px;
+  text-align: left;
+}
+
+.ozida-nav-item:hover,
+.ozida-button:hover {
+  border-color: var(--ozida-accent);
+}
+
+.ozida-nav-item.is-active {
+  border-color: var(--ozida-accent);
+  color: var(--text-on-accent);
+  background: var(--ozida-accent);
+}
+
+.ozida-center-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ozida-gap);
+}
+
+.ozida-center-header {
+  padding: 4px 2px;
+}
+
+.ozida-eyebrow {
+  color: var(--ozida-accent);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ozida-center-header h1 {
+  margin-top: 4px;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.ozida-section-summary {
+  max-width: 640px;
+  margin-top: 8px;
+  color: var(--ozida-muted);
+  line-height: 1.5;
+}
+
+.ozida-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--ozida-gap);
+}
+
+.ozida-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--ozida-card-border);
+  border-radius: var(--ozida-radius);
+  background: var(--ozida-card-bg);
+}
+
+.ozida-card h3 {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.ozida-card-copy {
+  color: var(--ozida-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.ozida-command-bar,
+.ozida-action-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ozida-button {
+  min-height: 32px;
+  padding: 6px 10px;
+}
+
+.ozida-ai-input {
+  width: 100%;
+  min-height: 96px;
+  resize: vertical;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 10px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  font: inherit;
+}
+
+.ozida-meta-row,
+.ozida-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--ozida-muted);
+  font-size: 13px;
+}
+
+.ozida-meta-row strong,
+.ozida-status-row strong {
+  color: var(--text-normal);
+  font-weight: 600;
+  text-align: right;
+}
+
+@media (max-width: 1100px) {
+  .ozida-shell {
+    grid-template-columns: 180px minmax(320px, 1fr);
+  }
+
+  .ozida-right-panel {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .ozida-shell {
+    grid-template-columns: 1fr;
+    overflow: auto;
+  }
+
+  .ozida-card-grid,
+  .ozida-right-panel {
+    grid-template-columns: 1fr;
+  }
+}

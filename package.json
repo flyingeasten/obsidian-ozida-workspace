@@ -1,0 +1,26 @@
+{
+  "name": "ozida-workspace",
+  "version": "0.1.0",
+  "description": "A personal AI workspace and dashboard for Obsidian.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production"
+  },
+  "keywords": [
+    "obsidian",
+    "plugin",
+    "dashboard",
+    "ai"
+  ],
+  "author": "Easten",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "^0.20.2",
+    "obsidian": "latest",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.3"
+  }
+}
